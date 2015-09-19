@@ -28,7 +28,7 @@
 			<p>Enter an auction and see how many days are left until it expires.</p>
 			<div><label for="start">Start</label><input type="text" name="start" id="start" placeholder="MM/DD/YYYY" required></div>
 			<div><label for="end">End</label><input type="text" name="end" id="end" placeholder="MM/DD/YYYY" required></div>
-            <input type="submit" value="Submit" id="submit">
+            <input type="submit" value="Submit" id="submit" onsubmit="return process()">
         </fieldset>
     </form>
     <script src="auction.js"></script>

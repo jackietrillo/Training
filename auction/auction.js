@@ -16,7 +16,7 @@ function process() {
     // For the output:
     var message = '';
     var interval = '';
-    var day = 1000 * 60 * 60 *24;
+    var day = 1000 * 60 * 60 *24; //number of ms in a day 
 
     // Validate that start and end are good!
 

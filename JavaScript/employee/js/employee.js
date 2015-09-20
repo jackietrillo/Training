@@ -3,13 +3,16 @@
 
 // Function called when the form is submitted.
 // Function creates a new object.
+
+var employees =[];
+
 function process() {
     'use strict';
 
     // Get form references:
-    var firstName = document.getElementById('firstName').value;
-    var lastName = document.getElementById('lastName').value;
-    var department = document.getElementById('department').value;
+    var firstName = $('firstName');
+    var lastName = $('lastName');
+    var department = $('department');
 
     // Reference to where the output goes:
     var output = document.getElementById('output');
@@ -26,11 +29,19 @@ function process() {
         //hireDate2 = hireDate.toString();
     }; // Don't forget the semicolon!
 
-    // Create the ouptut as HTML:
-    var message = '<h2>Employee Added</h2>Name: ' + employee.getName() + '<br>';
-    message += 'Department: ' + employee.department + '<br>';
-    message += 'Hire Date: ' + employee.hireDate.toDateString();
-
+    employees.push(employee);
+        
+    var message = '<h2>Employees</h2><ol>';
+    for (var i = 0, count = employees.length; i < count; i++) {
+        
+        var temp = '<h2>Employee Added</h2>Name: ' + employees[i].getName() + '<br>';
+        temp += 'Department: ' + employees[i].department + '<br>';
+        temp += 'Hire Date: ' + employees[i].hireDate.toDateString();
+    
+        message += '<li>' + temp + '</li>';
+    }
+    message += '</ol>';
+   
     // Display the employee object:
     output.innerHTML = message;
 
@@ -39,26 +50,14 @@ function process() {
 
 } // End of process() function.
 
-/*
-function $(firstName){
+
+function $(elementId){
 	'use strict';
-	if(typeof firstName != 'undefined'){
-		return document.getElementByID(firstName).value;
+	if(typeof elementId != 'undefined'){
+		return document.getElementById(elementId).value;
 	}
 }
-function $(lastName){
-	'use strict';
-	if(typeof lastName != 'undefined'){
-		return document.getElementByID(lastName).value;
-	}
-}
-function $(department){
-	'use strict';
-	if(typeof department != 'undefined'){
-		return document.getElementByID(department).value;
-	}
-}
-*/
+
 
 // Initial setup:
 function init() {

@@ -1,0 +1,1 @@
+Update event.js to confirm that the starting date is in the future.

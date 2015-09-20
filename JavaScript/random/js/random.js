@@ -53,7 +53,7 @@ function showNumbers() {
     var numbers = '';
 
     for (var i = 0; i < 6; i++) {
-        numbers += getRandomNumber(100) + ' ';
+        numbers += getRandomNumber(10) + ' ';
     }
 
     // Show the numbers:

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Zodiac Finder by Connor Cheng</title>
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+	</script>
+	<![endif]-->
+	<!-- Connor Cheng
+	 ccheng71@my.smccd.edu
+	 CIS 114 OL
+	 zodiac.html
+	 Chapter 5
+	 Assignment 2
+	 September 9-->
+	<link rel="stylesheet" href="css/zodiac.css">
+</head>
+<body>	
+	<form action="" method="post" id="theForm">
+		<fieldset>
+		<legend>Find your Zodiac sign</legend>
+		<p>Complete this form to find your Chinese zodiac sign (which uses the Lunar calendar) based upon the month and year you were born in.</p>
+
+		<div>
+			<label for="years">Years</label>
+			<input type="text" name="years" id="years" required>
+		</div>
+
+		<div>
+			<label for="month">Month</label>
+				<select name="month" id="month" required>
+					<option value="February">February</option>
+					<option value="March">March</option>
+					<option value="April">April</option>
+					<option value="May">May</option>
+					<option value="June">June</option>
+					<option value="July">July</option>
+					<option value="August">August</option>
+					<option value="September">September</option>
+					<option value="October">October</option>
+					<option value="November">November</option>
+					<option value="December">December</option>
+				<option value="January">January</option>
+			</select>
+	</div>
+
+	<div>
+	<label for="sign">Zodiac Sign</label>
+		<input type="text" name="sign" id="sign" disabled>
+	</div>
+	<div>
+	  <label>&nbsp;</label>
+	  <img name="zodiacimage" id="zodiacimage">
+	</div>
+
+	<input type="submit" value="submit" id="submit">
+	</fieldset>
+	</form>
+
+	<script src="js/zodiac.js"></script>
+</body>
+</html>

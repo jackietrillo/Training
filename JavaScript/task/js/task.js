@@ -4,6 +4,15 @@
 // Need a global variable:
 var tasks = []; 
 
+function getRandomTask(randomNumber)
+{
+	if( length  == 1)
+	{
+		return message;
+	}
+
+}
+
 // Function called when the form is submitted.
 // Function adds a task to the global array.
 function addTask() {
@@ -23,6 +32,10 @@ function addTask() {
         // Add the item to the array:
         tasks.push(task.value);
         
+		var randomTask = getRandom(tasks.length);
+		
+		tasks.push(randomTask);
+		
         // Update the page:
         message = '<h2>To-Do</h2><ol>';
         for (var i = 0, count = tasks.length; i < count; i++) {

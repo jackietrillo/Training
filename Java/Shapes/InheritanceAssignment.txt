@@ -1,0 +1,53 @@
+Project 3: Inhertiance
+Write a set of classes to represent shapes. 
+o	Write five classes: 
+?	PolyShape 
+?	This class represents polygons with an instance data variable int[] sideLengths.
+?	This class should have a method getPerimeter() that takes no parameters and returns an integer.
+?	Quadrilateral
+?	
+?	This class represents polygons with four sides
+?	Rectangle
+?	
+?	This class should have a method getArea() that takes no parameters and returns an integer.
+?	Square
+?	Triangle
+?	
+?	This class represents polygons with three sides
+?	This class should have methods isIsoceles and isEquilateral that returns a boolean if two or three (respectively) sides are of equal length
+o	
+?	In each class, include: 
+?	one or more constructors
+?	getters and setters
+?	a toString method that returns the number of sides, the side lengths, and all possible names for a shape. 
+?	For example, a square might print "I have four sides of length 3, 3, 3, and 3. I am a polygon. I am a quadrilateral. I am a rectangle. I am a square."
+?	When designing your classes, consider the following.
+?	
+?	Think about what the parent-child relationship should be between these classes.
+?	Think about what information should be sent as parameters and what information can be hard-coded (using constants) into a class.
+?	Move common code as high up in the hierarchy as possible.
+?	Use super whenever possible.
+?	Follow appropriate naming and style conventions.
+?	Follow good principals of object-oriented design and inheritance.
+o	Write an interactive driver program. 
+?	The program allows the user to repeatedly create a shape by entering its dimensions. 
+?	Note: you do not need to handle negative or decimal values in the driver program. You can assume the user will enter positive integer input only.
+?	The program prints the object created and the perimeter, area (if applicable), and isIsoceles/isEquilateral (if applicable) methods.
+?	I have provided a sample program so you can see how the driver program works.
+?	Your classes should work with your driver program, but they should be designed to work with other drivers, too (for example, a driver I might create). 
+?	Think carefully about what kind of checks should go in the driver program and what kind of checks should go in the individual classes.
+?	Remember that object-oriented design states that each object should be in charge of its own information.
+o	You will be graded both on your syntax but also your program design. For full credit, consider all of the design elements listed above.
+Extra Credit (10 points)
+Print out a text-based graphic of the shape created when the user creates a square or a rectangle. For example, a 4x5 rectangle might print:
+*****
+*    *
+*    *
+*****
+Submission
+•	Zip all files together and upload that file. 
+•	You will receive no credit for files that do not compile.
+•	Include your name in the title of the zip file.
+•	You can work in groups of up to three students on all projects. If you work in a group, submit only one submission and include all names in the comments section of the java file.
+•	Late projects can be submitted up to a four days late with a 10% late penalty.
+

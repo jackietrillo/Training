@@ -1,0 +1,11 @@
+a {
+	border: 1px solid yellow;
+}
+
+
+.client-logo-box {
+    float: left;
+    border: 2px solid #fcd250;
+    margin: 0 11px 11px 0;
+	opacity: 0;
+}

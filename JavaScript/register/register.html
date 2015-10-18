@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Registration Form by Connor Cheng</title>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/newform.css">
+</head>
+<body>
+    <!-- Script 10.6 - register.html -->
+    <form action="#" method="post" id="theForm">
+        <fieldset><legend>Register</legend>
+			<p>All fields are required.</p>
+			<div class="two"><label for="firstName" class="two">First Name</label><input type="text" name="firstName" id="firstName" ></div>
+			<div class="two"><label for="lastName" class="two">Last Name</label><input type="text" name="lastName" id="lastName"></div>
+			<div class="two"><label for="email" class="two">Email Address</label><input type="email" name="email" id="email"></div>
+			<div class="two"><label for="phone" class="two">Phone Number<span class="tooltip">In the format XXX XXX XXXX or XXX-XXX-XXXX or XXXXXXXXXX.</span></label><input type="text" name="phone" id="phone" ></div>
+			<div class="two"><label for="city" class="two">City</label><input type="text" name="city" id="city" ></div>
+			<div class="two"><label for="state" class="two">State</label><select name="state" id="state">
+				<option value="">Select a State</option>
+				<option value="AL">Alabama</option>
+				<option value="AK">Alaska</option>
+				<option value="AZ">Arizona</option>
+				<option value="AR">Arkansas</option>
+				<option value="CA">California</option>
+				<option value="CO">Colorado</option>
+			</select></div>
+			<div class="two"><label for="zip" class="two">Zip Code</label><input type="text" name="zip" id="zip" ></div>
+			<div class="one"><input type="checkbox" name="terms" id="terms" > I agree to the terms, whatever they are.</div>
+			<div class="one"><input type="submit" value="Register" id="submit"></div>
+        </fieldset>
+    </form>	
+    <script src="js/utilities.js"></script>
+    <script src="js/errorMessages.js"></script>
+    <script src="js/register.js"></script>
+</body>
+</html>

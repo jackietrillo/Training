@@ -1,0 +1,22 @@
+3) Modify epoch.js sp that a button element is clicked to update the message.
+
+5) Change events.js so that it notifies the user when the form has been submitted
+and the event handlers have been registered.
+
+7) Modify events.js so that it uses addEvent() for the form-submission error handler
+and then prevents the form's submission using the code also added to membership.js
+
+8) Update membership.js so that it delegates the event handling by registering the change event handler
+on the entire form.
+
+Jackie's phone number: 954-260-5782
+
+change the css so that it looks like how they are given in pdf.
+
+window.onload represents window when it's called
+
+document element by id
+
+elements are the HTML tags in the HTML documents.
+
+div element named output in id

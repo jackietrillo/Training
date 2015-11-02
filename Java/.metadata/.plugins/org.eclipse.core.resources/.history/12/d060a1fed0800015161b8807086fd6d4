@@ -1,0 +1,28 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+
+import javax.swing.*;
+
+/**
+ * Simple drawing program.
+ * 
+ * @author pat
+ */
+public class DrawingApplication  {
+    
+  
+    public static void main(String[] args) {
+      
+        JFrame frame = new JFrame("Simple Interaction Demo");
+      
+        frame.setSize(640, 480);                
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                
+        frame.add(new DrawingPanel());
+        // Make the window visible:
+        frame.setVisible(true);
+    }
+}

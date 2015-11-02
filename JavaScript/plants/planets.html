@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Plants and Galaxies</title>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/planets.css"> 
+</head>
+<body>  
+	<form action="#" method="post" id="theForm">
+	    <fieldset>
+            
+            <legend>Plants and Galaxies</legend>
+	                   
+            <select name="planets" id="planets">
+                <option value="-1">Select</option>
+                <option value="1">Earth</option>
+                <option value="2">Venus</option>
+                <option value="3">Earth</option>
+                <option value="4">Mars</option>
+                <option value="5">Jupiter</option>
+                <option value="6">Saturn</option>
+                <option value="7">Uranus</option>
+                <option value="8">Neptune</option>
+                <option value="galaxies">Galaxies</option>
+            </select>
+            
+            <select name="galaxies" id="galaxies">
+                <option value="-1">Select</option>
+                <option value="1">Andromeda Galaxy</option>
+                <option value="2">M82 Galaxy</option>
+                <option value="3">Milky Way</option>
+                <option value="4">NGC 5866</option>
+                <option value="5">Omega Centauri</option>
+                <option value="6">Whirlpool Galaxy</option>
+                <option value="planets">planets</option>
+            </select>
+            	                 
+            <div id="output">
+                <img id="img" src="img/mercury.jpg" >
+                <h1 id="title">Mercury</h1>
+                <p id="info"></p>
+            </div>	   	  
+	    </fieldset>    
+     </form>
+     <script src="js/utilities.js"></script></form>
+     <script src="js/data.js"></script>     
+     <script src="js/planets.js"></script>
+</body>
+</html>

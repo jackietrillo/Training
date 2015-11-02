@@ -6,6 +6,16 @@
 
 var employees =[];
 
+function employeeObject(firstName, lastName, department) {
+	this.firstName = firstName;
+	this.lastName = lastName;
+	this.department = department;
+	this.hireDate = new Date();
+	this.getName = function() {
+            return this.lastName + ', ' + this.firstName;
+     };       
+}
+
 function process() {
     'use strict';
 
@@ -14,20 +24,10 @@ function process() {
     var lastName = $('lastName');
     var department = $('department');
 
+	var employee = new employeeObject(firstName, lastName, department);
+
     // Reference to where the output goes:
     var output = document.getElementById('output');
-
-    // Create a new object:
-    var employee = {
-        firstName: firstName,
-        lastName: lastName,
-        department: department,
-        getName: function() {
-            return this.lastName + ', ' + this.firstName;
-        },
-        hireDate: new Date()
-        //hireDate2 = hireDate.toString();
-    }; // Don't forget the semicolon!
 
     employees.push(employee);
         

@@ -1,0 +1,21 @@
+import java.awt.Color;
+import java.awt.geom.GeneralPath;
+
+public class DrawingPath {
+	
+	private GeneralPath path;
+	private Color color;
+
+	public DrawingPath(Color color) {
+		this.path = new GeneralPath();
+		this.color = color;		
+	}
+	
+	public GeneralPath getPath() {		
+		return this.path;
+	}
+		
+	public Color getColor() {		
+		return this.color;
+	}	
+}

@@ -1,0 +1,41 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class TextBoxApplication {
+
+
+	 
+    public static void main(String[] args) {
+        
+        JFrame frame = new JFrame("TextBox Application");      
+        frame.setSize(640, 480);                
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLayout(null);
+                                               
+        JTextField userInputTextField = new JTextField();     
+        userInputTextField.setBounds(50,10,100,20);
+        frame.getContentPane().add(userInputTextField);
+        
+        JTextField outputTextField = new JTextField();    
+        outputTextField.setBounds(50, 40, 100, 20);
+        frame.getContentPane().add(outputTextField);
+        
+	    JButton submitButton = new JButton("submit");	    
+	    submitButton.addActionListener(new ActionListener() {	    	
+	    	 public void actionPerformed(ActionEvent e)
+	    	 {	    	    
+	    	    //JDialog dialog = new JDialog(frame, "Hello", true);
+	    	    //dialog.setLocationRelativeTo(frame);
+	    	    //dialog.setVisible(true);
+	    		 outputTextField.setText(userInputTextField.getText());
+	    		 userInputTextField.setText("");
+	    	 }	    		    	
+	    }); 
+	    	   
+	    submitButton.setBounds(50, 70, 100, 20);
+	    frame.getContentPane().add(submitButton);	    
+	    frame.setVisible(true);  
+	    	    	 	    
+    }
+}

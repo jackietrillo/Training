@@ -1,0 +1,58 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+
+import javax.swing.*;
+
+/**
+ * Simple drawing program.
+ * 
+ * @author pat
+ */
+public class DrawingApplication implements ColorSelectedEvent {
+    
+  
+	private DrawingPanel drawingPanel;
+	
+    public static void main(String[] args) {
+      
+        JFrame window = new JFrame("Drawing Application");      
+        window.setSize(640, 480);                
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);               
+      
+        
+      
+       // mainframe.add(new ColorPanel());
+        
+    	
+	  //  JButton blueButton = new JButton("Blue");
+      //  blueButton.setBackground(Color.BLUE);
+       // blueButton.addActionListener(this);                
+        //mainframe.add(blueButton);
+        
+        DrawingApplication app = new DrawingApplication(); 
+        
+        ColorPanel colorPanel = new ColorPanel();
+        colorPanel.colorEvent = app;
+        window.add(colorPanel);
+        window.add(new DrawingPanel(Color.BLACK));      
+        window.setVisible(true);
+                   
+        
+    }
+
+
+	@Override
+	public void onColorSelected(Color color) {
+		
+		JOptionPane.showMessageDialog(null, "My Goodness, this is so concise");
+	}
+}

@@ -1,0 +1,38 @@
+import javax.swing.*;
+
+public class TextBoxApplication {
+
+    public static void main(String[] args) {
+        
+        JFrame frame = new JFrame("TextBox Application");      
+        frame.setSize(640, 480);                
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLayout(null);
+                                               
+        JTextField input1  = new JTextField();     
+        input1.setBounds(50,10,100,20);
+        frame.getContentPane().add(input1);
+        
+        JTextField textBox2 = new JTextField();    
+        textBox2.setBounds(50, 40, 100, 20);
+        frame.getContentPane().add(textBox2);
+        
+        JTextField resultTextBox = new JTextField();    
+        resultTextBox.setBounds(50, 40, 100, 20);
+        frame.getContentPane().add(resultTextBox);
+        
+	    JButton plusButton = new JButton("+");	    
+	    plusButton.addActionListener(new ButtonListener(frame, textBox1, textBox2 ));	    		    	    	   
+	    plusButton.setBounds(50, 70, 100, 20);
+	   
+	    JButton minusButton = new JButton("-");	    
+	    minusButton.addActionListener(new ButtonListener(frame, textBox1, textBox2 ));	    		    	    	   
+	    minusButton.setBounds(50, 100, 100, 20);
+	   
+	    
+	    frame.getContentPane().add(plusButton);
+	    frame.getContentPane().add(minusButton);
+	    frame.setVisible(true);  
+	    	    	 	    
+    }
+}

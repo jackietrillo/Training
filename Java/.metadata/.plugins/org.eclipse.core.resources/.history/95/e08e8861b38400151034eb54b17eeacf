@@ -1,0 +1,42 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import javax.swing.*;
+
+/**
+ * Simple drawing program.
+ * 
+ * @author pat
+ */
+public class DrawingApplication implements ColorSelectedEvent {
+      
+	private static DrawingPanel drawingPanel = new DrawingPanel();
+	
+    public static void main(String[] args) {
+      
+        JFrame window = new JFrame("Drawing Application");      
+        window.setSize(600, 500);                
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);               
+                   
+        DrawingApplication app = new DrawingApplication(); 
+        
+        ColorPanel colorPanel = new ColorPanel();
+        colorPanel.colorEvent = app;
+        window.add(colorPanel, BorderLayout.PAGE_START);
+        window.add(drawingPanel, BorderLayout.CENTER);      
+        window.setVisible(true);                           
+    }
+
+	@Override
+	public void onColorSelected(Color color) {
+		
+		drawingPanel.setColor(color);
+		JOptionPane.showMessageDialog(null, "My Goodness, this is so concise");
+		
+	}
+}

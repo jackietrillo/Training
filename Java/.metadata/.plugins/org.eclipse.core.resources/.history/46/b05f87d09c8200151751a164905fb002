@@ -1,0 +1,56 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class TextBoxApplication {
+
+
+	 
+    public static void main(String[] args) {
+        
+        JFrame frame = new JFrame("TextBox Application");      
+        frame.setSize(640, 480);                
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);               
+        Container contentPane = frame.getContentPane();
+        
+        frame.setLayout(null);
+      
+        
+   
+        
+        
+        JTextField userInputTextField = new JTextField();     
+        //userInputTextField.setPreferredSize(new Dimension(100, 50));
+        userInputTextField.setBounds(10,10,100,50);
+        //contentPane.add(userInputTextField, BorderLayout.LINE_START);
+        contentPane.add(userInputTextField);
+        
+        JTextField outputTextField = new JTextField();    
+        outputTextField.setBounds(50, 50, 300, 50);
+        outputTextField.setPreferredSize(new Dimension(100, 50));
+        //contentPane.add(outputTextField, BorderLayout.CENTER);
+        contentPane.add(outputTextField);
+        
+	    JButton submitButton = new JButton("submit");	    
+	    submitButton.addActionListener(new ActionListener() {	    	
+	    	 public void actionPerformed(ActionEvent e)
+	    	 {	    	    
+	    	    //JDialog dialog = new JDialog(frame, "Hello", true);
+	    	    //dialog.setLocationRelativeTo(frame);
+	    	    //dialog.setVisible(true);
+	    		 outputTextField.setText(userInputTextField.getText());
+	    		 userInputTextField.setText("");
+	    	 }	    		    	
+	    }); 
+	    
+	    //contentPane.add(submitButton, BorderLayout.LINE_END);
+	    contentPane.add(submitButton);
+	    
+	    frame.setVisible(true);  
+	    
+	    
+	 
+	    
+	    
+    }
+}

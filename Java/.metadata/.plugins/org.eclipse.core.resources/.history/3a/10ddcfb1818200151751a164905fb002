@@ -1,0 +1,7 @@
+
+public class TimerApplication {
+    public static void main(String args[]) {
+        new Reminder(5);
+        System.out.format("Task scheduled.%n");
+    }
+}

@@ -1,0 +1,55 @@
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Point;
+import java.awt.event.*;
+import java.util.ArrayList;
+
+import javax.swing.JPanel;
+
+
+public class DrawingPanel extends JPanel  {
+   
+	private static final long serialVersionUID = 1L;
+	private final ArrayList<Point> points = new ArrayList<>();
+	
+	private Boolean penActivated = false; 
+	
+	
+    
+    public DrawingPanel(Color color) {
+        setBackground(Color.WHITE); // Make the background color white
+        this.setSize(300, 300);
+        this.setLocation(0, 100);
+        
+       
+        
+        addMouseMotionListener (
+    			new MouseMotionAdapter() {
+    				@Override
+    				public void mouseDragged(MouseEvent event) {
+    					points.add(event.getPoint());
+    					repaint();
+    				}
+    			}
+    		);
+        
+       // addMouseListener(this);
+        //addMouseMotionListener(this);
+    }
+   
+   
+	
+	@Override
+	public void paintComponent(Graphics graphic) {
+		super.paintComponent(graphic);
+		
+		for(Point point: points) {
+			graphic.fillOval(point.x, point.y, 4, 4);
+		}
+	}
+
+    
+  
+    
+}

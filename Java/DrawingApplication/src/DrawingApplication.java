@@ -1,12 +1,5 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-
-import java.awt.event.ActionListener;
-import java.awt.event.WindowListener;
-
+import java.awt.BorderLayout;
+import java.awt.Color;
 import javax.swing.*;
 
 /**
@@ -14,18 +7,37 @@ import javax.swing.*;
  * 
  * @author pat
  */
-public class DrawingApplication implements WindowListener, ActionListener  {
-    
-  
+public class DrawingApplication implements DrawingButtonClickEvent {
+      
+	private static DrawingPanel drawingPanel = new DrawingPanel();
+	
     public static void main(String[] args) {
       
-        JFrame frame = new JFrame("Simple Interaction Demo");      
-        frame.setSize(640, 480);                
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);               
-        frame.add(new DrawingPanel());      
-        frame.setVisible(true);
+        JFrame window = new JFrame("Drawing Application");      
+        window.setSize(600, 500);                
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);               
+                   
+        DrawingApplication app = new DrawingApplication(); 
         
-        JButton b = new JButton("Click me");
-        b.addActionListener(this);
+        DrawingButtonPanel colorPanel = new DrawingButtonPanel(window);
+        colorPanel.drawingButtonClickEvent = app;
+        window.add(colorPanel, BorderLayout.PAGE_START);
+        window.add(drawingPanel, BorderLayout.CENTER);      
+        window.setVisible(true);                           
     }
+
+	@Override
+	public void onColorChanged(Color color) {		
+		drawingPanel.setPenColor(color);			
+	}
+
+	@Override
+	public void onErase() {
+		drawingPanel.erase();			
+	}
+
+	@Override
+	public void onClear() {
+		drawingPanel.clear();		
+	}
 }

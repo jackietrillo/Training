@@ -1,0 +1,70 @@
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.event.*;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+public class DrawingButtonPanel extends JPanel implements ActionListener {
+	
+	private static final long serialVersionUID = 1L;
+	public DrawingButtonClickEvent drawingButtonClickEvent;
+	
+	public DrawingButtonPanel() {
+		setBackground(Color.WHITE); // Make the background color white
+		this.setSize(300, 100);
+		this.setLocation(0, 0);	
+		this.setLayout(new FlowLayout());
+	    
+		JButton blueButton = new JButton("Blue");
+		blueButton.setForeground(Color.WHITE);
+        blueButton.setBackground(Color.BLUE);
+        blueButton.addActionListener(this);
+        this.add(blueButton);
+        
+        JButton redButton = new JButton("Red");
+        redButton.setForeground(Color.WHITE);
+        redButton.setBackground(Color.RED);
+        redButton.addActionListener(this);
+        this.add(redButton);           
+        
+        JButton greenButton = new JButton("Green");
+        greenButton.setForeground(Color.WHITE);
+        greenButton.setBackground(Color.GREEN);
+        greenButton.addActionListener(this);
+        this.add(greenButton);
+        
+        JButton clearButton = new JButton("Clear");
+        clearButton.setForeground(Color.BLACK);
+        clearButton.setBackground(Color.WHITE);
+        clearButton.addActionListener(this);
+        this.add(clearButton);       
+                
+        JButton eraseButton = new JButton("Erase");
+        eraseButton.setForeground(Color.BLACK);
+        eraseButton.setBackground(Color.WHITE);
+        eraseButton.addActionListener(this);
+        this.add(eraseButton);      
+            
+	}
+
+	public void actionPerformed(ActionEvent e) {
+			
+		JButton button = ((JButton) e.getSource());
+		
+		if (button.getText().toLowerCase() == "clear") {
+			
+			//
+		}
+		else if (button.getText().toLowerCase()  == "erase") {
+			
+			//
+		}
+		else 
+		{	
+			if (drawingButtonClickEvent != null) {			
+				Color color = ((JButton) e.getSource()).getBackground();							
+				drawingButtonClickEvent.onColorChanged(color);				
+			}
+		}
+    }
+}
